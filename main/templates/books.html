@@ -6,10 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Это тестовая страница</h2>
-    <div>Версия 2</div>
-    {% for todo in todo_list %}
-        {{ todo.text }}
-    {% for endfor%}
+    {% for book in books %}
+        <h2>{{ book.title }}</h2>
+        <h2>{{ book.price }}</h2>
+        <h2>{{ book.author }}</h2>
+    {% endfor %}
 </body>
 </html>
