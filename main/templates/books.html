@@ -11,5 +11,35 @@
         <h2>{{ book.price }}</h2>
         <h2>{{ book.author }}</h2>
     {% endfor %}
+    <div>
+        <form action="{% url 'add_books' %}" method="POST">
+            {% csrf_token %}
+            <div>
+                <input type="text" placeholder="Заголовок" name="book"/>
+            </div>
+            <div>
+                <input type="text" placeholder="Подзаголовок" name="book2"/>
+            </div>
+            <div>
+                <input type="text" placeholder="Описание" name="book3"/>
+            </div>
+            <div>
+                <input type="text" placeholder="Цена" name="book4"/>
+            </div>
+            <div>
+                <input type="text" placeholder="Жанр" name="book5"/>
+            </div>
+            <div>
+                <input type="text" placeholder="Автор" name="book6"/>
+            </div>
+            <div>
+                <input type="text" placeholder="Год выхода книги" name="book7"/>
+            </div>
+            
+            <button>Добавить</button>
+            
+            
+        </form>
+    </div>
 </body>
 </html>

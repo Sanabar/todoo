@@ -25,3 +25,9 @@ def deleted(request):
 
 def third(request):
     return HttpResponse("This is page test3")
+
+def add_books(request):
+    form = request.POST
+    book = Book(title=form["book"], subtitle=form["book2"], desctiption=form["book3"], price=form["book4"], genre=form["book5"], author=form["book6"], year=form["book7"])
+    book.save()
+    return HttpResponse("Вы добавили книгу")
